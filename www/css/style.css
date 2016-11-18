@@ -29,7 +29,6 @@ html, body {
 #header, #footer{
 	height:150px;
 	margin:0px;
-	background-color:gray;
 	padding:0px;
 }
 
@@ -46,6 +45,8 @@ html, body {
 	margin-right:0.75%;
 	margin-left:0.75%;
 	background-color:purple;
+	border-radius:10px;
+	border: 2px black;
 }
 
 #header .button{
@@ -55,9 +56,44 @@ html, body {
 
 }
 
-.talkbutton {
-
+#bgbutton {
+	height:130px;
+	background-size:cover;
+	width:130px;
+	background-image: url(../assets/background.png);
+	display:block;
+	float:right;
+	margin:10px;
 }
+
+#bgbutton:active{
+	height:110px;
+	width:110px;
+	margin:20px;
+}
+
+a {
+	text-decoration:none;
+	display:block;
+	float:right;
+}
+
+#popupDialog {
+	width: 600px;
+	min-height:500px;
+	font-size:2em;
+	background-color:white;
+}
+
+#popupDialog .header{
+	height:100px;
+	font-size:1em;
+}
+
+#bgSelect {
+	width:300px;
+}
+
 
 
 
