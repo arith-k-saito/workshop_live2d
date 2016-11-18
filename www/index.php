@@ -23,12 +23,16 @@
 
 
         <div id="footer" data-role="footer" data-position="fixed">
-        <div class="button"></div>
+        <div class="button speechify"></div>
         <div class="button"></div>
         <div class="button"></div>
         <div class="button"></div>
         <div class="button"></div>
         </div>
+
+
+        <div class="speechbg"></div>
+        <div class="speechwords"></div>
 
         <!-- Live2D Library -->
         <script src="../../lib/live2d.min.js"></script>

@@ -6,6 +6,12 @@ var backgrounds = [
 	"bg03.png"
 ];
 
+var speechy = [
+	"I like rice.",
+	"Melons are good.",
+	"Tra la la la la la la."
+];
+
 var bgbutton = [
 	"background_w.png",
 	"background.png",
@@ -44,6 +50,13 @@ $(document).ready(function(){
 	//set heigth of canvas container
 	$(".chara-view").css('height', $(document).innerHeight());
 	console.log($("#bgSelect"));
+
+
+	$(".speechify").click(function(){
+		console.log("Blah!");
+		var randomnum = Math.floor(Math.random()*speechy.length);
+		$(".speechwords").html(speechy[randomnum]);
+	});
 
 	for(var i = 0; i<backgrounds.length; i++){
 		console.log("hello again");
