@@ -1,33 +1,39 @@
 <?php
-try {
-    $host = getenv('MYSQL_HOST');
-    $user = getenv('MYSQL_USER');
-    $password = getenv('MYSQL_PASSWORD');
-    $database = getenv('MYSQL_DATABASE');
-    $charset = getenv('MYSQL_CHARSET');
 
-    $pdo = new PDO("mysql:host={$host};dbname={$database};charset={$charset}", $user, $password,
-        array(PDO::ATTR_EMULATE_PREPARES => false, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-    $insert = <<<___EOS___
-INSERT INTO members (name, age, created, modified, deleted, sex) 
-VALUES (:name, :age, now(), now(), 0, :sex)
-___EOS___;
-
-    $stmt = $pdo->prepare($insert);
-
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    $stmt->bindValue(':age', 14, PDO::PARAM_INT);
-    $stmt->bindValue(':sex', 0, PDO::PARAM_INT);
-    $name = '太郎';
-    $ret = $stmt->execute();
-
-    $stmt = $pdo->query("SELECT * FROM members");
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo join("|", $row) . "<br>\n";
-    }
+    require('header.php');
 
 
-} catch (PDOException $e) {
-    exit('データベース接続失敗。' . $e->getMessage());
-}
+    ?>
+
+    <body onload="sampleApp1()">
+        
+        <p>
+            <button id="btnChange" class="active">Change Model</button>
+        </p>
+        
+        <div>
+            <canvas id="glcanvas" width="680" height="940" 
+                style="border:dashed 1px #CCC">
+            </canvas>
+        </div>
+        
+        <div id="myconsole" style="color:#000">---- Log ----</div>
+
+        <!-- Live2D Library -->
+        <script src="../../lib/live2d.min.js"></script>
+
+        <!-- Live2D Framework -->
+        <script src="../../framework/Live2DFramework.js"></script>
+        
+        <!-- User's Script -->
+        <script src="src/utils/MatrixStack.js"></script>
+        <script src="src/utils/ModelSettingJson.js"></script>
+        <script src="src/PlatformManager.js"></script>
+        <script src="src/LAppDefine.js"></script>
+        <script src="src/LAppModel.js"></script>
+        <script src="src/LAppLive2DManager.js"></script>
+        <script src="src/SampleApp1.js"></script>
+
+    </body>
+
+    </html>
