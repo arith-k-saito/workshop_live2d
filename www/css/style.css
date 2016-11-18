@@ -12,7 +12,7 @@ html, body {
     left: 30%;
 }
 
-#glcanvas {
+#page {
     /*
     position: absolute;
     top: 50%;
@@ -27,11 +27,37 @@ html, body {
 }
 
 #header, #footer{
-	height:100px;
+	height:150px;
 	margin:0px;
 	background-color:gray;
+	padding:0px;
 }
 
 #page {
 	padding-top:0px !important;
 }
+
+#footer .button {
+	display:inline-block;
+	float:right;
+	margin-top:10px;
+	height:130px;
+	width:18%;
+	margin-right:0.75%;
+	margin-left:0.75%;
+	background-color:purple;
+}
+
+#header .button{
+	display:block;
+	margin-top:10px;
+	height:130px;
+
+}
+
+.talkbutton {
+
+}
+
+
+

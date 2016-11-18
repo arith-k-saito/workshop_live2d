@@ -22,7 +22,11 @@
 
 
         <div id="footer" data-role="footer" data-position="fixed">
-        <h1>Fixed Footer!</h1>
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
         </div>
 
         <!-- Live2D Library -->
