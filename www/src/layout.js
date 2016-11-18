@@ -22,6 +22,7 @@ var menustrings = [];
 
 var setBackground = function(element){
 
+	
 
 
 	var randomnum = Math.floor(Math.random()*backgrounds.length);
@@ -65,15 +66,8 @@ $(document).ready(function(){
 
 	
 	$("#bgbutton").click(function(){
-		$("#popupDialog").popup('open');
-		
-		$("#bgSelect").selectmenu();
-		$("#bgSelect").change(function(){
-			console.log($("#page").css('background-image'));
-			var selected = $(this).val();
-			$("#page").css('background-image', 'url('+selected+')');
-			$("#popupDialog .message").show();
-		});
+		console.log("hi");
+		setBackground($("#page"));
 
 	});
 
