@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>Live2D SampleApp1</title>
+        </meta>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=4.0">
+
+        <link rel="stylesheet" href="css/quiz.css" type="text/css" media="screen">
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script> 
+        
+        <script src="src/layout.js"></script>
+        <script src="data/question.js"></script>
+
+
+        <script>
+            $(document).ready(function(){
+                var app = sampleApp1();
+                var quizObj = new Quiz();
+                quizObj.setApp(app);
+
+
+                displayScore(quizObj.score);
+                displayQuestion(quizObj.questions[0], quizObj);
+
+                $("#expression01").click(function(){
+                    quizObj.setExpression("f01");
+                });
+
+                $("#expression02").click(function(){
+                    quizObj.setExpression("f02");
+                });
+
+                $("#expression03").click(function(){
+                    quizObj.setExpression("f03");
+                });
+
+                $("#expression04").click(function(){
+                    quizObj.setExpression("f04");
+                });
+
+                $("#expression05").click(function(){
+                    quizObj.setExpression("f05");
+                });
+
+                $("#expression06").click(function(){
+                    quizObj.setExpression("f06");
+                });
+
+                $("#expression07").click(function(){
+                    quizObj.setExpression("f07");
+                });
+
+                $("#expression08").click(function(){
+                    quizObj.setExpression("f08");
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <button id="expression01" class="active">Expr01</button>
+        <button id="expression02" class="active">Expr02</button>
+        <button id="expression03" class="active">Expr03</button>
+        <button id="expression04" class="active">Expr04</button>
+        <button id="expression05" class="active">Expr05</button>
+        <button id="expression06" class="active">Expr06</button>
+        <button id="expression07" class="active">Expr07</button>
+        <button id="expression08" class="active">Expr08</button>
+        <div class="container_12">
+            <div class="overlay grid_12">
+                <div id="stat-panel" class="grid_12" style="height:15%;">
+                    <div id="score" class="grid_3">0000</div>
+                    <div class="grid_6">&nbsp;</div>
+                    <div id="score" class="grid_3">00:00</div>
+                </div>
+                <div id="spacer" class="grid_12" style="height:60%;">&nbsp;</div>
+
+
+                <div id="quiz-panel" class="grid_12 " style="height:25%;">
+                    <div id="question" class="grid_4">
+                        <div class="shade"><p>What should we cook for dinner tonight?</p></div>
+                        
+                    </div>
+
+                    <div id="answerbox" class="grid_8">
+                        <ul>
+                            <li>A. Pie</li>
+                            <li>B. Pie</li>
+                            <li>C. Pie</li>
+                            <li>D. More Pie</li>
+                        </ul>
+
+                    </div>
+
+                    
+                
+                </div>
+            </div>
+
+
+            <div class="chara-view grid_12" style="min-height:100% !important">
+                <p style="display:none">
+                    <button id="btnChange" class="active">Change Model</button>
+                </p>
+                
+                <div>
+                    <canvas id="glcanvas"  style="border:dashed 1px #CCC">
+                    </canvas>
+                </div>
+                
+                <div id="myconsole" style="color:#000">---- Log ----</div>
+
+                <!-- Live2D Library -->
+                <script src="../../../lib/live2d.min.js"></script>
+
+                <!-- Live2D Framework -->
+                <script src="../../../framework/Live2DFramework.js"></script>
+                
+                <!-- User's Script -->
+                <script src="src/utils/MatrixStack.js"></script>
+                <script src="src/utils/ModelSettingJson.js"></script>
+                <script src="src/PlatformManager.js"></script>
+                <script src="src/LAppDefine.js"></script>
+                <script src="src/LAppModel.js"></script>
+                <script src="src/LAppLive2DManager.js"></script>
+                <script src="src/SampleApp1.js"></script>
+                <script src="data/question.js"></script>
+            </div>
+        <div>
+    </body>
+</html>
