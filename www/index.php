@@ -22,7 +22,7 @@
 
 
         <div id="footer" data-role="footer" data-position="fixed">
-        <div class="button"></div>
+        <div class="button" id="talk"></div>
         <div class="button"></div>
         <div class="button"></div>
         <div class="button"></div>

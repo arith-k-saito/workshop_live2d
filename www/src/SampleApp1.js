@@ -68,6 +68,7 @@ function initL2dCanvas(canvasId)
     btnChangeModel = document.getElementById("btnChange");
     btnChangeModel.addEventListener("click", function(e) {
 //        changeModel();
+          talk();
     });
 }
 
@@ -188,6 +189,10 @@ function draw()
     MatrixStack.pop();
 }
 
+function talk()
+{
+    thisRef.live2DMgr.tapEvent(-0.16, -0.42);
+}
 
 function changeModel()
 {
@@ -332,7 +337,8 @@ function mouseEvent(e)
         
     } else if (e.type == "contextmenu") {
         
-        changeModel();
+        //changeModel();
+        talk();
     }
 
 }
