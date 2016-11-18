@@ -8,8 +8,9 @@
     <body onload="sampleApp1()">
     <div id="page" data-role="page">
         <div id="header" data-role="header" data-position="fixed">
-        Fixed Header!<button id="btnChange" class="active">Change Model</button>
-        </div>'
+        <button id="btnChange" class="active">Change Model</button>
+        <div id="bgbutton"></div>
+        </div>
         
         
         <div>
@@ -43,6 +44,31 @@
         <script src="src/LAppModel.js"></script>
         <script src="src/LAppLive2DManager.js"></script>
         <script src="src/SampleApp1.js"></script>
+
+        <div id="popupDialog" data-role="popup">
+            <div class="header" data-role="header">
+                <h2>Change the Background?</h2>
+            </div>
+            <div data-role="content">
+
+                <center>
+                    Please choose a background
+                    <br>
+
+                    <select name="background" id="bgSelect">
+                    </select>
+
+                    <div class="message" style="display:none">
+                        Keep this background?
+                    </div>
+
+                    <a href="#" data-role="button">Change</a>
+                    <a href="#" data-role="button">Cancel</a>
+                </center>
+            
+            </div>
+
+        </div>
 
 
 
