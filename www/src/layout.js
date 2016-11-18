@@ -3,9 +3,9 @@ var imagepath = "assets/image/";
 
 var setBackground = function(element){
 	var backgrounds = [
-		"beach.jpg",
-		"space.jpg",
-		"class.jpg"
+		"bg01.png",
+		"bg02.png",
+		"bg02.png"
 	];
 
 	var image = backgrounds[Math.floor(Math.random()*backgrounds.length)];
